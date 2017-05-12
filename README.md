@@ -2,6 +2,13 @@
 
 > IT Operations Console
 
+https://vuejs.org/
+https://vuetifyjs.com/quick-start
+https://nuxtjs.org/guide/installation
+
+https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd
+
+
 ## Build Setup
 
 ``` bash
