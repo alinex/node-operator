@@ -1,13 +1,16 @@
-# alinex-operator
+# Alinex Operator
 
-> IT Operations Console
+> Nuxt.js project
 
-https://vuejs.org/
-https://vuetifyjs.com/quick-start
-https://nuxtjs.org/guide/installation
+## Used Technologies
 
-https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd
-
+[Nuxt/Express Template](https://github.com/nuxt/express)
+[NuxtJS](https://nuxtjs.org/)
+[Vue 2](https://github.com/vuejs/vue)
+[Vue-Router](https://github.com/vuejs/vue-router)
+[Vue-Meta](https://github.com/declandewet/vue-meta)
+[Webpack](https://github.com/webpack/webpack)
+[Vue-loader](https://github.com/vuejs/vue-loader)
 
 ## Build Setup
 
@@ -19,11 +22,11 @@ $ npm install # Or yarn install
 $ npm run dev
 
 # build for production and launch server
-$ npm run build
 $ npm start
-
-# generate static project
-$ npm run generate
 ```
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+
+## Backpack
+
+We use [backpack](https://github.com/palmerhq/backpack) to watch and build the application, so you can use the latest ES6 features (module syntax, async/await, etc.).
