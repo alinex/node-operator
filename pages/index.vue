@@ -1,7 +1,5 @@
 <template>
   <section class="container">
-    <img src="../assets/img/Alinex-400.png" alt="Alinex Logo" class="logo" />
-    <h1 class="title">IT Operator Console</h1>
     <h1>
       USERS
     </h1>
@@ -19,6 +17,7 @@
 import axios from '~plugins/axios'
 
 export default {
+  layout: 'title',
   async asyncData () {
     let { data } = await axios.get('/api/users')
     return {

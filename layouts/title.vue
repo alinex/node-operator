@@ -1,5 +1,9 @@
 <template>
   <div>
+    <section class="title">
+      <img src="../assets/img/Alinex-400.png" alt="Alinex Logo" class="logo" />
+      <h1>IT Operator Console</h1>
+    </section>
     <nuxt/>
     <my-footer/>
   </div>
@@ -15,17 +19,14 @@ export default {
 }
 </script>
 
-<style>
-.container
-{
+<style lang="stylus">
+section.container
   margin: 0;
   width: 100%;
   padding: 50px 0;
   text-align: center;
-}
 
 .button, .button:visited
-{
   display: inline-block;
   color: black;
   letter-spacing: 1px;
@@ -34,19 +35,17 @@ export default {
   text-decoration: none;
   text-transform: uppercase;
   padding: 15px 45px;
-}
 
 .button:hover, .button:focus
-{
   color: #fff;
   background-color: #000;
-}
 
-.title
-{
-  color: #000;
-  font-weight: 300;
-  font-size: 2.5em;
-  margin: 0;
-}
+section.title
+  width: 100%;
+  padding: 100px 0 0 0;
+  text-align: center;
+  color: #666;
+  font-size: 1.6em;
+  h1
+    margin-top: 0
 </style>
