@@ -32,20 +32,16 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="stylus">
 .title
-{
   margin: 0 0 80px 0;
   color: #666;
-}
+
 .users
-{
   list-style: none;
   margin: 0;
   padding: 0;
-}
+
 .user
-{
   margin: 10px 0;
-}
 </style>
