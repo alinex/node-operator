@@ -37,6 +37,7 @@ module.exports = {
     '~assets/css/main.css'
 //    {src: join(__dirname, 'css/app.styl'), lang: 'styl'}
   ],
+
   /*
   ** Add axios globally
   */

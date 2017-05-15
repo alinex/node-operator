@@ -4,13 +4,14 @@
 
 ## Used Technologies
 
-[Nuxt/Express Template](https://github.com/nuxt/express)
-[NuxtJS](https://nuxtjs.org/)
-[Vue 2](https://github.com/vuejs/vue)
-[Vue-Router](https://github.com/vuejs/vue-router)
-[Vue-Meta](https://github.com/declandewet/vue-meta)
-[Webpack](https://github.com/webpack/webpack)
-[Vue-loader](https://github.com/vuejs/vue-loader)
+- Base Template [Nuxt/Express](https://github.com/nuxt/express)
+- Framework [NuxtJS](https://nuxtjs.org/)
+- View Component [Vue 2](https://github.com/vuejs/vue)
+- Client Router [Vue-Router](https://github.com/vuejs/vue-router)
+- [Vue-Meta](https://github.com/declandewet/vue-meta)
+- [Vue-loader](https://github.com/vuejs/vue-loader)
+- [Webpack](https://github.com/webpack/webpack)
+- Logging with [morgan](https://github.com/expressjs/morgan)
 
 ## Build Setup
 
@@ -25,8 +26,16 @@ $ npm run dev
 $ npm start
 ```
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+## Page Structure
 
-## Backpack
+__Basic Pages__
 
-We use [backpack](https://github.com/palmerhq/backpack) to watch and build the application, so you can use the latest ES6 features (module syntax, async/await, etc.).
+    /       System Title
+    /login      
+
+## REST API
+
+__Authentication__
+
+    POST /api/auth/login
+    POST /api/auth/logout

@@ -1,13 +1,30 @@
 import Nuxt from 'nuxt'
 import express from 'express'
+import bodyParser from 'body-parser'
+import session from 'express-session'
+import morgan from 'morgan'
 
 import api from './api'
 
 const app = express()
+
 const host = process.env.HOST || '127.0.0.1'
 const port = process.env.PORT || 3000
-
 app.set('port', port)
+
+// Body parser, to access req.body
+app.use(bodyParser.json())
+
+// Sessions to create req.session
+app.use(session({
+  secret: 'LfB6OBF02uEP2',
+  resave: false,
+  saveUninitialized: false,
+  cookie: { maxAge: 60000 }
+}))
+
+// Enable logging to stdout
+app.use(morgan('combined'))
 
 // Import API Routes
 app.use('/api', api)

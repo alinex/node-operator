@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "IT Operator Console",
   "author": "Alexander Schilling <info@alinex.de>",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "backpack dev",
     "build": "nuxt build && backpack build",
@@ -13,10 +13,14 @@
   },
   "dependencies": {
     "axios": "^0.16.1",
-    "cross-env": "^4.0.0",
+    "body-parser": "^1.17.1",
+    "cross-env": "^5.0.0",
     "express": "^4.14.0",
+    "express-session": "^1.15.2",
+    "morgan": "^1.8.1",
     "nuxt": "~0.10.6",
-    "source-map-support": "^0.4.14"
+    "source-map-support": "^0.4.14",
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",

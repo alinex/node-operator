@@ -1,32 +1,18 @@
 <template>
   <section class="container">
-    <h1>
-      USERS
-    </h1>
-    <ul class="users">
-      <li v-for="(user, index) in users" class="user">
-        <nuxt-link :to="{ name: 'id', params: { id: index }}">
-          {{ user.name }}
-        </nuxt-link>
-      </li>
-    </ul>
+    <h1>Pre Alpha Version</h1>
+    <nuxt-link class="button" to="/user">Users</nuxt-link>
+    <nuxt-link class="button" to="/secret">Secret Page</nuxt-link>
+    <nuxt-link class="button" to="/not-there">File not Found</nuxt-link>
   </section>
 </template>
 
 <script>
-import axios from '~plugins/axios'
-
 export default {
   layout: 'title',
-  async asyncData () {
-    let { data } = await axios.get('/api/users')
-    return {
-      users: data
-    }
-  },
   head () {
     return {
-      title: 'Users'
+      title: 'Welcome'
     }
   }
 }

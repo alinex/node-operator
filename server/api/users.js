@@ -10,12 +10,12 @@ const users = [
 ]
 
 /* GET users listing. */
-router.get('/users', function (req, res, next) {
+router.get('/', function (req, res) {
   res.json(users)
 })
 
 /* GET user by ID. */
-router.get('/users/:id', function (req, res, next) {
+router.get('/:id', function (req, res) {
   var id = parseInt(req.params.id)
   if (id >= 0 && id < users.length) {
     res.json(users[id])
