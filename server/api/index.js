@@ -1,12 +1,10 @@
 import { Router } from 'express'
 
-import auth from './auth'
-import users from './users'
+import access from './access'
 
 var router = Router()
 
 // Add Routes
-router.use('/auth', auth)
-router.use('/user', users)
+router.use('/access', access)
 
 export default router

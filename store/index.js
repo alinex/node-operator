@@ -17,7 +17,7 @@ export const actions = {
     }
   },
   login ({ commit }, { username, password }) {
-    return axios.post('/api/auth/login', {
+    return axios.post('/api/access/auth/login', {
       username,
       password
     })
@@ -32,7 +32,7 @@ export const actions = {
   },
 
   logout ({ commit }) {
-    return axios.post('/api/auth/logout')
+    return axios.post('/api/access/auth/logout')
     .then(() => {
       commit('SET_USER', null)
     })

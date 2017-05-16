@@ -35,7 +35,59 @@ __Basic Pages__
 
 ## REST API
 
+__General Scheme__
+
+    HEAD    /api/<group>/<object>/<access>  // check for existence
+    GET     /api/<group>/<object>/<access>  // get object(s)/<value>
+    POST    /api/<group>/<object>/<access>  // change object(s)
+    PUT     /api/<group>/<object>/<access>  // add/replace object(s)
+    DELETE  /api/<group>/<object>/<access>  // delete object(s)
+
+`GET` and `HEAD` are always the same but without values in `HEAD`.
+
+Search for objects:
+
+    HEAD    /api/db/person/search/name/Hund
+    GET     /api/db/person/search/name/Hund
+    GET     /api/db/person/search
+            ?status_type_id=999009&name=%Hund%
+
+Accessing an individual object:
+
+    HEAD    /api/db/person/id/12345678
+    GET     /api/db/person/id/12345678
+
+Change object (changes in POST-DATA):
+
+    POST    /api/db/person/id/12345678
+            status_type_id=999020
+    POST    /api/db/person/search/name/Hund
+            status_type_id=999020
+    POST    /api/db/person/search
+            ?status_type_id=999009&name=%Hund%
+            status_type_id=999020
+
+Insert/replace/remove the object completely:
+
+    PUT     /api/db/person
+            name=..., ...
+    PUT     /api/db/person/id/12345678
+            name=..., ...
+    DELETE  /api/db/person/id/12345678
+
 __Authentication__
 
-    POST /api/auth/login
-    POST /api/auth/logout
+    POST    /api/access/auth/login
+            user=<string>, password=<string>
+    POST    /api/access/auth/logout
+
+__User Management__
+
+    GET     /api/access/user
+    GET     /api/access/user/id/<string>
+    GET     /api/access/user/email/<string>
+    PUT     /api/access/user/id/<string>
+            password=<string>, email=<string>
+    POST    /api/access/user/id/<string>
+            password=<string>, email=<string>
+    DELETE  /api/access/user/id/<string>
