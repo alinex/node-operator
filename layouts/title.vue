@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="title">
-      <img src="../assets/img/Alinex-400.png" alt="Alinex Logo" class="logo" />
+      <img src="~assets/img/Alinex-400.png" alt="Alinex Logo" class="logo" />
       <h1>IT Operator Console</h1>
     </section>
     <nuxt/>

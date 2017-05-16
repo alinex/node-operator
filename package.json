@@ -1,9 +1,23 @@
 {
   "name": "alinex-operator",
   "version": "0.1.0",
+  "title": "IT Operator",
   "description": "IT Operator Console",
-  "author": "Alexander Schilling <info@alinex.de>",
-  "private": false,
+  "keywords": ["webapp", "web", "application"],
+  "copyright": "Alexander Schilling 2017",
+  "homepage": "https://github.com/alinex/node-operator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alinex/node-operator"
+  },
+  "bugs": "https://github.com/alinex/node-operator/issues",
+  "author": {
+    "name": "Alexander Schilling",
+    "email": "info@alinex.de",
+    "web": "http://alinex.de"
+  },
+  "contributors": [],
+  "license": "Apache-2.0",
   "scripts": {
     "dev": "backpack dev",
     "build": "nuxt build && backpack build",

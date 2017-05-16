@@ -47,5 +47,17 @@ if (config.dev) {
 }
 
 // Listen the server
-app.listen(port, host)
-console.log('Server listening on ' + host + ':' + port) // eslint-disable-line no-console
+if (config.dev) {
+  app.listen(port, host)
+  console.log('Server listening on http://' + host + ':' + port) // eslint-disable-line no-console
+} else {
+  // Setup HTTPS
+  var https = require('https')
+  var fs = require('fs')
+  var options = {
+    key: fs.readFileSync('server/private.key'),
+    cert: fs.readFileSync('server/certificate.pem')
+  }
+  https.createServer(options, app).listen(port, host)
+  console.log('Server listening on https://' + host + ':' + port) // eslint-disable-line no-console
+}

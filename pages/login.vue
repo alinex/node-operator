@@ -49,11 +49,9 @@ export default {
 }
 </script>
 
-<style>
-.container {
+<style lang="stylus">
+.container
   padding: 100px;
-}
-.error {
+.error
   color: red;
-}
 </style>

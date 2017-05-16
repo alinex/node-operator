@@ -6,11 +6,11 @@
 </template>
 
 <script>
-import MyFooter from '~components/Footer.vue'
+import Footer from '~components/Footer.vue'
 
 export default {
   components: {
-    MyFooter
+    Footer
   }
 }
 </script>
