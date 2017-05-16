@@ -35,6 +35,15 @@ __Basic Pages__
 
 ## REST API
 
+In the following paragraphs some of the API calls are described with:
+- Http Method
+- URI
+- Query Parameter (starting with '?')
+- Post Parameter
+- Group allowed (starting with '@')
+
+In general `GET` and `HEAD` are always the same but without values in `HEAD`.
+
 __General Scheme__
 
     HEAD    /api/<group>/<object>/<access>  // check for existence
@@ -43,7 +52,6 @@ __General Scheme__
     PUT     /api/<group>/<object>/<access>  // add/replace object(s)
     DELETE  /api/<group>/<object>/<access>  // delete object(s)
 
-`GET` and `HEAD` are always the same but without values in `HEAD`.
 
 Search for objects:
 
@@ -75,6 +83,11 @@ Insert/replace/remove the object completely:
             name=..., ...
     DELETE  /api/db/person/id/12345678
 
+### Access Management
+
+The rights are based on the groups in which an user is member of. It is persisted
+within a json file on disk.
+
 __Authentication__
 
     POST    /api/access/auth/login
@@ -83,11 +96,21 @@ __Authentication__
 
 __User Management__
 
-    GET     /api/access/user
-    GET     /api/access/user/id/<string>
-    GET     /api/access/user/email/<string>
-    PUT     /api/access/user/id/<string>
+    GET     /api/access/user                   @admin
+            ?email=<string>
+    GET     /api/access/user/<string>                         // nopasswd
+    PUT     /api/access/user/<string>                         // register
             password=<string>, email=<string>
-    POST    /api/access/user/id/<string>
+    POST    /api/access/user/<string>          @self, @admin
             password=<string>, email=<string>
-    DELETE  /api/access/user/id/<string>
+    DELETE  /api/access/user/<string>          @self, @admin
+
+__Groups__
+
+    GET     /api/access/group                                 // rights  
+            ?user=<string>
+    GET     /api/access/group/<string>                        // users          
+    PUT     /api/access/group/<string>         @admin         // new group
+    DELETE  /api/access/group/<string>         @admin         // remove group
+    PUT     /api/access/group/<string>/member/<string>  @admin
+    DELETE  /api/access/group/<string>/member/<string>  @admin
