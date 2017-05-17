@@ -15,15 +15,15 @@ router.get('/', function (req, res) {
 })
 
 /* GET user by ID. */
-router.get('/:id', function (req, res) {
-  if (typeof req.session.authUser === 'undefined') {
-    return res.sendStatus(401)
-  }
+router.get('/:id', function (req, res, next) {
+//  if (typeof req.session.authUser === 'undefined') {
+//    return next({ statusCode: 401, message: "Unauthorized" })
+//  }
   var id = parseInt(req.params.id)
   if (id >= 0 && id < users.length) {
     res.json(users[id])
   } else {
-    res.sendStatus(404)
+    next({ statusCode: 404, message: "User not found" })
   }
 })
 

@@ -24,7 +24,8 @@ app.use(session({
 }))
 
 // Enable logging to stdout
-app.use(morgan('combined'))
+//app.use(morgan('combined'))
+app.use(morgan('tiny'))
 
 // Import API Routes
 app.use('/api', api)
@@ -47,17 +48,20 @@ if (config.dev) {
 }
 
 // Listen the server
-if (config.dev) {
-  app.listen(port, host)
-  console.log('Server listening on http://' + host + ':' + port) // eslint-disable-line no-console
-} else {
+var server = app // default http
+var protocol = 'http'
+if (!config.dev) {
   // Setup HTTPS
   var https = require('https')
   var fs = require('fs')
   var options = {
-    key: fs.readFileSync('server/private.key'),
-    cert: fs.readFileSync('server/certificate.pem')
+    key: fs.readFileSync('server/ssl/private.key'),
+    cert: fs.readFileSync('server/ssl/certificate.pem')
   }
-  https.createServer(options, app).listen(port, host)
-  console.log('Server listening on https://' + host + ':' + port) // eslint-disable-line no-console
+  server = https.createServer(options, app)
+  protocol = 'https'
 }
+
+server.listen(port, host, null, () => {
+  console.log('Server listening on ' + protocol + '://' + host + ':' + port) // eslint-disable-line no-console
+})

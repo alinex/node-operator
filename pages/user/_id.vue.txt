@@ -19,12 +19,30 @@ import axios from '~plugins/axios'
 export default {
   name: 'id',
   asyncData ({ params, error }) {
-    return axios.get('/api/user/' + params.id)
+    return axios.get('/api/access/user/' + params.id)
     .then((res) => {
       return { user: res.data }
     })
     .catch((e) => {
-      error({ statusCode: 404, message: 'User not found' })
+      var data = null
+      if (e.response) {
+        data = {
+          statusCode: e.response.status,
+          message: e.response.data.message || e.response.statusText,
+          detail: {
+            Request: e.response.request._header.trim(),
+            Response: Object.keys(e.response.headers).map((key) => {
+              return key + ': ' + e.response.headers[key]
+            }).join('\n')
+          }
+        }
+        if (e.response.data.stack) {
+          data.detail['Stack Trace'] = e.response.data.stack
+        } else if (e.response.data) {
+          data.detail.Data = e.response.data
+        }
+      }
+      error(data)
     })
   },
   head () {

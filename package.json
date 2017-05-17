@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "title": "IT Operator",
   "description": "IT Operator Console",
-  "keywords": ["webapp", "web", "application"],
+  "keywords": [
+    "webapp",
+    "web",
+    "application"
+  ],
   "copyright": "Alexander Schilling 2017",
   "homepage": "https://github.com/alinex/node-operator",
   "repository": {
