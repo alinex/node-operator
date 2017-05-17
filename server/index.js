@@ -1,8 +1,8 @@
 import Nuxt from 'nuxt'
 import express from 'express'
 import bodyParser from 'body-parser'
-import session from 'express-session'
 import morgan from 'morgan'
+import session from 'express-session'
 
 import api from './api'
 
@@ -16,12 +16,13 @@ app.set('port', port)
 app.use(bodyParser.json())
 
 // Sessions to create req.session
+var FileStore = require('session-file-store')(session);
 app.use(session({
+  store: new FileStore,
   secret: 'LfB6OBF02uEP2',
   resave: false,
-  saveUninitialized: false,
-  cookie: { maxAge: 60000 }
-}))
+  saveUninitialized: false
+}));
 
 // Enable logging to stdout
 //app.use(morgan('combined'))
