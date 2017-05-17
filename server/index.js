@@ -19,9 +19,11 @@ app.use(bodyParser.json())
 var FileStore = require('session-file-store')(session);
 app.use(session({
   store: new FileStore,
+  name: 'alinex',
   secret: 'LfB6OBF02uEP2',
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: false,
+  unset: 'destroy'
 }));
 
 // Enable logging to stdout
