@@ -14,4 +14,7 @@ dist
 build
 
 # Local Settings
+local/sessions
+
+# old paths
 sessions

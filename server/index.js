@@ -18,7 +18,7 @@ app.use(bodyParser.json())
 // Sessions to create req.session
 var FileStore = require('session-file-store')(session);
 app.use(session({
-  store: new FileStore,
+  store: new FileStore({ path: './local/sessions' }),
   name: 'alinex',
   secret: 'LfB6OBF02uEP2',
   resave: false,

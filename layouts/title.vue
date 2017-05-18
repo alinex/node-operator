@@ -5,16 +5,16 @@
       <h1>IT Operator Console</h1>
     </section>
     <nuxt/>
-    <my-footer/>
+    <page-footer/>
   </div>
 </template>
 
 <script>
-import MyFooter from '~components/Footer.vue'
+import PageFooter from '~components/PageFooter.vue'
 
 export default {
   components: {
-    MyFooter
+    PageFooter
   }
 }
 </script>

@@ -43,6 +43,7 @@ module.exports = {
   */
   build: {
     vendor: ['axios'],
+    publicPath: '/static/', // default is '/_nuxt/'
     /*
     ** Run ESLINT on save
     */

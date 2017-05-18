@@ -1,16 +1,16 @@
 <template>
   <div>
     <nuxt/>
-    <my-footer/>
+    <page-footer/>
   </div>
 </template>
 
 <script>
-import Footer from '~components/Footer.vue'
+import PageFooter from '~components/PageFooter.vue'
 
 export default {
   components: {
-    Footer
+    PageFooter
   }
 }
 </script>
