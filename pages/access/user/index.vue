@@ -5,11 +5,9 @@
     </h1>
     <ul class="users">
       <li v-for="(user, index) in users" class="user">
-        <!--
-        <nuxt-link :to="{ name: 'id', params: { id: index }}">
+        <nuxt-link :to="index.toString()">
           {{ user.name }}
         </nuxt-link>
-      -->{{ index }}: {{ user.name }} 
       </li>
     </ul>
   </section>

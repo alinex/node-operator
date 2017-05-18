@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <h1>Pre Alpha Version</h1>
-    <nuxt-link class="button" to="/user">Users</nuxt-link>
+    <nuxt-link class="button" to="/access/user/">Users</nuxt-link>
     <nuxt-link class="button" to="/secret">Secret Page</nuxt-link>
     <nuxt-link class="button" to="/not-there">File not Found</nuxt-link>
   </section>
