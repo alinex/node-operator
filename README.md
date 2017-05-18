@@ -1,31 +1,31 @@
 # Alinex Operator
 
 [![GitHub watchers](
-  https://img.shields.io/github/watchers/alinex/node-codedoc.svg?style=social&label=Watch&maxAge=2592000)](
-  https://github.com/alinex/node-codedoc/subscription)<!-- {.hidden-small} -->
+  https://img.shields.io/github/watchers/alinex/node-operator.svg?style=social&label=Watch&maxAge=2592000)](
+  https://github.com/alinex/node-operator/subscription)<!-- {.hidden-small} -->
 [![GitHub stars](
-  https://img.shields.io/github/stars/alinex/node-codedoc.svg?style=social&label=Star&maxAge=2592000)](
-  https://github.com/alinex/node-codedoc)
+  https://img.shields.io/github/stars/alinex/node-operator.svg?style=social&label=Star&maxAge=2592000)](
+  https://github.com/alinex/node-operator)
 [![GitHub forks](
-  https://img.shields.io/github/forks/alinex/node-codedoc.svg?style=social&label=Fork&maxAge=2592000)](
-  https://github.com/alinex/node-codedoc)<!-- {.hidden-small} -->
+  https://img.shields.io/github/forks/alinex/node-operator.svg?style=social&label=Fork&maxAge=2592000)](
+  https://github.com/alinex/node-operator)<!-- {.hidden-small} -->
 <!-- {p:.right} -->
 
 [![npm package](
-  https://img.shields.io/npm/v/alinex-codedoc.svg?maxAge=2592000&label=latest%20version)](
-  https://www.npmjs.com/package/alinex-codedoc)
+  https://img.shields.io/npm/v/alinex-operator.svg?maxAge=2592000&label=latest%20version)](
+  https://www.npmjs.com/package/alinex-operator)
 [![latest version](
-  https://img.shields.io/npm/l/alinex-codedoc.svg?maxAge=2592000)](
+  https://img.shields.io/npm/l/alinex-operator.svg?maxAge=2592000)](
   #license)<!-- {.hidden-small} -->
 [![Travis status](
-  https://img.shields.io/travis/alinex/node-codedoc.svg?maxAge=2592000&label=develop)](
-  https://travis-ci.org/alinex/node-codedoc)
+  https://img.shields.io/travis/alinex/node-operator.svg?maxAge=2592000&label=develop)](
+  https://travis-ci.org/alinex/node-operator)
 [![Gemnasium status](
-  https://img.shields.io/gemnasium/alinex/node-codedoc.svg?maxAge=2592000)](
-  https://gemnasium.com/alinex/node-codedoc)
+  https://img.shields.io/gemnasium/alinex/node-operator.svg?maxAge=2592000)](
+  https://gemnasium.com/alinex/node-operator)
 [![GitHub issues](
-  https://img.shields.io/github/issues/alinex/node-codedoc.svg?maxAge=2592000)](
-  https://github.com/alinex/node-codedoc/issues)<!-- {.hidden-small} -->
+  https://img.shields.io/github/issues/alinex/node-operator.svg?maxAge=2592000)](
+  https://github.com/alinex/node-operator/issues)<!-- {.hidden-small} -->
 
 This is a full featured web application including newest client and server technologies
 to make it a work base for IT Operators and other technical stuff.
