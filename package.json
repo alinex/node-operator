@@ -6,7 +6,8 @@
   "keywords": [
     "webapp",
     "web",
-    "application"
+    "application",
+    "operator"
   ],
   "copyright": "Alexander Schilling 2017",
   "homepage": "https://github.com/alinex/node-operator",
