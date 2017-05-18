@@ -18,7 +18,7 @@ app.set('port', port)
 app.use(bodyParser.json())
 
 // Sessions to create req.session
-var FileStore = require('session-file-store')(session);
+var FileStore = require('session-file-store')(session)
 app.use(session({
   store: new FileStore({ path: './local/sessions' }),
   name: 'alinex',
@@ -26,7 +26,7 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
   unset: 'destroy'
-}));
+}))
 
 // Enable logging to stdout
 app.use(morgan(production ? 'combined' : 'tiny'))

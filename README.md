@@ -35,6 +35,7 @@ The application is build on top of the following technologies:
 - View Component [Vue 2](https://github.com/vuejs/vue)
 - Client Router [Vue-Router](https://github.com/vuejs/vue-router)
 - Server [ExpressJS](http://expressjs.com/)
+- Testing [intern](https://theintern.github.io)
 
 And also used are the following helpers:
 - Vue extensions [meta](https://github.com/declandewet/vue-meta) and

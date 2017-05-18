@@ -1,5 +1,5 @@
-const TITLE = 'IT Operator';
-const DESC = 'IT Operator Console for management of complex IT structures';
+const TITLE = 'IT Operator'
+const DESC = 'IT Operator Console for management of complex IT structures'
 
 module.exports = {
 

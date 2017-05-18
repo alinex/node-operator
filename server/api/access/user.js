@@ -23,7 +23,7 @@ router.get('/:id', function (req, res, next) {
   if (id >= 0 && id < users.length) {
     res.json(users[id])
   } else {
-    next({ statusCode: 404, message: "User not found" })
+    next({ statusCode: 404, message: 'User not found' })
   }
 })
 
