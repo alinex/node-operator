@@ -15,6 +15,7 @@ build
 
 # Local Settings
 local/sessions
+local/data/*
 
 # old paths
 sessions
