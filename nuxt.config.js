@@ -42,7 +42,8 @@ module.exports = {
   ** Add axios globally
   */
   build: {
-    vendor: ['axios'],
+    vendor: ['axios', 'vuetify'],
+//    plugins: ['~plugins/vuetify.js'],
     publicPath: '/static/', // default is '/_nuxt/'
     /*
     ** Run ESLINT on save
