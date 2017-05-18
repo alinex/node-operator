@@ -6,10 +6,12 @@ import session from 'express-session'
 
 import api from './api'
 
-const app = express()
-
 const host = process.env.HOST || '127.0.0.1'
 const port = process.env.PORT || 3000
+const production = process.env.NODE_ENV === 'production'
+
+// setup express app
+const app = express()
 app.set('port', port)
 
 // Body parser, to access req.body
@@ -22,27 +24,24 @@ app.use(session({
   name: 'alinex',
   secret: 'LfB6OBF02uEP2',
   resave: false,
-  saveUninitialized: false,
+  saveUninitialized: true,
   unset: 'destroy'
 }));
 
 // Enable logging to stdout
-//app.use(morgan('combined'))
-app.use(morgan('tiny'))
+app.use(morgan(production ? 'combined' : 'tiny'))
 
-// Import API Routes
-app.use('/api', api)
-
-// Import and Set Nuxt.js options
+// Initialize nuxt
 let config = require('../nuxt.config.js')
-config.dev = !(process.env.NODE_ENV === 'production')
-
-// Init Nuxt.js
+config.dev = !production
 const nuxt = new Nuxt(config)
-app.use(nuxt.render)
+
+// Set routes
+app.use('/api', api) // server api routes
+app.use(nuxt.render) // client content
 
 // Build only in dev mode
-if (config.dev) {
+if (!production) {
   nuxt.build()
   .catch((error) => {
     console.error(error) // eslint-disable-line no-console
@@ -50,10 +49,10 @@ if (config.dev) {
   })
 }
 
-// Listen the server
+// Configure server
 var server = app // default http
 var protocol = 'http'
-if (!config.dev) {
+if (production) {
   // Setup HTTPS
   var https = require('https')
   var fs = require('fs')
@@ -65,6 +64,7 @@ if (!config.dev) {
   protocol = 'https'
 }
 
+// Start server
 server.listen(port, host, null, () => {
   console.log('Server listening on ' + protocol + '://' + host + ':' + port) // eslint-disable-line no-console
 })
