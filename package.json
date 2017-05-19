@@ -24,7 +24,7 @@
   "contributors": [],
   "license": "Apache-2.0",
   "scripts": {
-    "dev": "backpack dev",
+    "dev": "PORT=3333 backpack dev",
     "build": "nuxt build && backpack build",
     "start": "cross-env NODE_ENV=production node build/main.js",
     "precommit": "npm run lint",

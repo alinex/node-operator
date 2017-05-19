@@ -1,3 +1,5 @@
+const { join } = require('path')
+
 const TITLE = 'IT Operator'
 const DESC = 'IT Operator Console for management of complex IT structures'
 
@@ -43,8 +45,17 @@ module.exports = {
   */
   build: {
     vendor: ['axios', 'vuetify'],
-//    plugins: ['~plugins/vuetify.js'],
+    plugins: ['~plugins/vuetify.js', '~plugins/axios.js'],
     publicPath: '/static/', // default is '/_nuxt/'
+    css: [
+      { src: join(__dirname, 'assets/css/app.styl'), lang: 'styl' }
+    ],
+    head: {
+      link: [
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
+      ]
+    },
     /*
     ** Run ESLINT on save
     */
