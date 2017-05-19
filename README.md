@@ -27,25 +27,7 @@
   https://img.shields.io/github/issues/alinex/node-operator.svg?maxAge=86400)](
   https://github.com/alinex/node-operator/issues)<!-- {.hidden-small} -->
 
-This is a full featured web application including newest client and server technologies
-to make it a work base for IT Operators and other technical stuff.
-
-The application is build on top of the following technologies:
-- Framework [NuxtJS](https://nuxtjs.org/)
-- View Component [Vue 2](https://github.com/vuejs/vue)
-- Client Router [Vue-Router](https://github.com/vuejs/vue-router)
-- Server [ExpressJS](http://expressjs.com/)
-- Testing [intern](https://theintern.github.io)
-
-And also used are the following helpers:
-- Vue extensions [meta](https://github.com/declandewet/vue-meta) and
-  [loader](https://github.com/vuejs/vue-loader)
-- Build System [Backpack](https://github.com/palmerhq/backpack) and
-  [Webpack](https://github.com/webpack/webpack)
-- Logging with [morgan](https://github.com/expressjs/morgan)
-- and more...
-
-The operator application is a Frontend to manage complex IT structures. It displays
+The operator application is a front-end to manage complex IT structures. It displays
 the complete structure in an object oriented way while objects may be:
 - database objects
 - systems
@@ -58,28 +40,66 @@ These operation objects maybe linked with each other and are allowed to:
 - monitor them
 
 In the end it gives you the ability to click your way through all your systems and
-data within some mouseclicks in your browser.
+data within some mouse clicks in your browser.
 
+## Architecture
+
+The IT Operator consists of two parts, the [Control](https://github.com/alinex/node-control)
+and the [REST](https://github.com/alinex/node-rest) servers.
+
+![Environment](doc/environment.png)
+
+The [Control](https://github.com/alinex/node-control) server delivers a web application
+and builds the desktop and mobile apps to be used. They are all the same on different
+devices. They all contact and get their data from the central
+[REST](https://github.com/alinex/node-rest) servers which may be load balanced and
+clustered for high scalability.
 
 ## Usage
 
 **In the moment this is in heavy development and not really ready for productive use.**
 
-To try it out:
+The Operator contains both, the Control and REST server, so you may start one or
+the other and maybe also both on one server.
+
+### Installation
+
+For easy and fast handling use yarn:
 
 ``` bash
-# install it
-$ npm install https://github.com/alinex/node-operator
-
-# serve with hot reload
-$ cd node_modules/node-operator
-$ npm run dev
-
-# build for production and launch server
-$ cd node_modules/node-operator
-$ npm run build
-$ npm start
+# Install yarn package manager
+$ sudo npm install -g yarn
+# Install the operator
+$ yarn global add https://github.com/alinex/node-operator
 ```
+
+Now you may start it:
+``` bash
+$ yarn control  # Start control server
+$ yarn rest     # Start rest server
+$ yarn start    # Start both servers
+```
+
+### Development
+
+For development you should clone from github and install:
+
+``` bash
+# Install yarn package manager
+$ git clone https://github.com/alinex/node-operator
+# Install the modules
+$ yarn
+```
+
+Now you may run the development version with hot reloading:
+
+``` bash
+# Start both server
+$ yarn dev
+```
+
+You may also run each of them individually in their modules.
+
 
 ## Page Structure
 
