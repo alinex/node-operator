@@ -1,4 +1,4 @@
-# Alinex Operator
+# Alinex Operator System
 
 The operator application is a front-end to manage complex IT structures. It displays
 the complete structure in an object oriented way while objects may be:
@@ -20,20 +20,6 @@ Find the source at:
 - [Control App](https://github.com/alinex/node-control)
 - [REST Server](https://github.com/alinex/node-rest)
 
-
-
-## Architecture
-
-The IT Operator consists of two parts, the [Control](https://github.com/alinex/node-control)
-and the [REST](https://github.com/alinex/node-rest) servers.
-
-![Environment](doc/environment.png)
-
-The [Control](https://github.com/alinex/node-control) server delivers a web application
-and builds the desktop and mobile apps to be used. They are all the same on different
-devices. They all contact and get their data from the central
-[REST](https://github.com/alinex/node-rest) servers which may be load balanced and
-clustered for high scalability.
 
 ### Components
 

@@ -44,7 +44,7 @@ These operation objects maybe linked with each other and are allowed to:
 In the end it gives you the ability to click your way through all your systems and
 data within some mouse clicks in your browser.
 
-__Read more in the [Alinex Operator Book](https://alinex.gitbooks.io/operator/).__
+Read more in the [Alinex Operator Book](https://alinex.gitbooks.io/operator/).
 
 
 ## Usage
