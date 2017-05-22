@@ -27,6 +27,8 @@
   https://img.shields.io/github/issues/alinex/node-operator.svg?maxAge=86400)](
   https://github.com/alinex/node-operator/issues)<!-- {.hidden-small} -->
 
+__Current State: In initial phase - not working.__
+
 The operator application is a front-end to manage complex IT structures. It displays
 the complete structure in an object oriented way while objects may be:
 - database objects
@@ -49,21 +51,31 @@ and the [REST](https://github.com/alinex/node-rest) servers.
 
 ![Environment](doc/environment.png)
 
-The [Control](https://github.com/alinex/node-control) server delivers a web application
+The [Control](https://github.com/alinex/node-control/blob/master/README.md)
+server delivers a web application
 and builds the desktop and mobile apps to be used. They are all the same on different
 devices. They all contact and get their data from the central
-[REST](https://github.com/alinex/node-rest) servers which may be load balanced and
-clustered for high scalability.
+[REST](https://github.com/alinex/node-rest/blob/master/README.md)
+servers which may be load balanced and clustered for high scalability.
 
 ### Components
 
-REST Server (default)
-- Port 1974
-- HTTPS
+The components displayed may be configured to your needs.
 
-Control Server (default)
-- Port 2301
-- HTTPS
+__Control Server + Application Builder__
+- Server which runs the application
+- Code base for mobile Apps
+- Code base for Desktop Applications
+
+__REST Server__
+- Authentication and Authorization Server
+- Data Retrieval Point
+- Processing Machine
+
+__Data Store__
+- Persistent store for the REST Server
+- User Profiles with Settings
+- Roles and rights
 
 ## Usage
 
@@ -84,6 +96,7 @@ $ yarn global add https://github.com/alinex/node-operator
 ```
 
 Now you may start it:
+
 ``` bash
 $ yarn control  # Start control server
 $ yarn rest     # Start rest server
