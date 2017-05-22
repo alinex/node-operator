@@ -1,0 +1,7 @@
+{
+  "root": "./doc",
+  "title": "Alinex NodeJS Modules API",
+  "description": "A combined API of all the essential NodeJS modules within the Alinex namespace.",
+  "author": "Alexander Schilling",
+  "language": "en"
+}
