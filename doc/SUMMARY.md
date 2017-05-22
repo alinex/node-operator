@@ -2,6 +2,6 @@
 
 - [Introduction](README.md)
 
-## System Overview
+### System Overview
 
 - [Architecture](chapter-01/architecture.md)

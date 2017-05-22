@@ -13,10 +13,19 @@ clustered for high scalability.
 
 ## Components
 
-REST Server (default)
-- Port 1974
-- HTTPS
+The components displayed may be configured to your needs.
 
-Control Server (default)
-- Port 2301
-- HTTPS
+__Control Server + Application Builder__
+- Server which runs the application
+- Code base for mobile Apps
+- Code base for Desktop Applications
+
+__REST Server__
+- Authentication and Authorization Server
+- Data Retrieval Point
+- Processing Machine
+
+__Data Store__
+- Persistent store for the REST Server
+- User Profiles with Settings
+- Roles and rights

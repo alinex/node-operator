@@ -21,15 +21,15 @@ Find the source at:
 - [REST Server](https://github.com/alinex/node-rest)
 
 
-### Components
 
-REST Server (default)
-- Port 1974
-- HTTPS
+## Coding
 
-Control Server (default)
-- Port 2301
-- HTTPS
+General information for all the ALinex modules can be found at: https://alinex.gitbooks.io/nodejs/
+
+
+
+
+
 
 ## Usage
 

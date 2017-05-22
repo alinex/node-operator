@@ -1,7 +1,7 @@
 {
   "root": "./doc",
-  "title": "Alinex NodeJS Modules API",
-  "description": "A combined API of all the essential NodeJS modules within the Alinex namespace.",
+  "title": "Alinex Operator System",
+  "description": "The operator application is a front-end to manage complex IT structures.",
   "author": "Alexander Schilling",
   "language": "en"
 }
