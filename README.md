@@ -44,42 +44,10 @@ These operation objects maybe linked with each other and are allowed to:
 In the end it gives you the ability to click your way through all your systems and
 data within some mouse clicks in your browser.
 
-## Architecture
+__Read more in the [Alinex Operator Book](https://alinex.gitbooks.io/operator/).__
 
-The IT Operator consists of two parts, the [Control](https://github.com/alinex/node-control)
-and the [REST](https://github.com/alinex/node-rest) servers.
-
-![Environment](doc/environment.png)
-
-The [Control](https://github.com/alinex/node-control/blob/master/README.md)
-server delivers a web application
-and builds the desktop and mobile apps to be used. They are all the same on different
-devices. They all contact and get their data from the central
-[REST](https://github.com/alinex/node-rest/blob/master/README.md)
-servers which may be load balanced and clustered for high scalability.
-
-### Components
-
-The components displayed may be configured to your needs.
-
-__Control Server + Application Builder__
-- Server which runs the application
-- Code base for mobile Apps
-- Code base for Desktop Applications
-
-__REST Server__
-- Authentication and Authorization Server
-- Data Retrieval Point
-- Processing Machine
-
-__Data Store__
-- Persistent store for the REST Server
-- User Profiles with Settings
-- Roles and rights
 
 ## Usage
-
-**In the moment this is in heavy development and not really ready for productive use.**
 
 The Operator contains both, the Control and REST server, so you may start one or
 the other and maybe also both on one server.
