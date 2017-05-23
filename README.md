@@ -47,12 +47,7 @@ data within some mouse clicks in your browser.
 Read more in the [Alinex Operator Book](https://alinex.gitbooks.io/operator/).
 
 
-## Usage
-
-The Operator contains both, the Control and REST server, so you may start one or
-the other and maybe also both on one server.
-
-### Installation
+## Installation
 
 For easy and fast handling use yarn:
 
@@ -63,7 +58,11 @@ $ sudo npm install -g yarn
 $ yarn global add https://github.com/alinex/node-operator
 ```
 
-Now you may start it:
+
+## Usage
+
+The Operator contains both, the Control and REST server, so you may start one or
+the other and maybe also both on one server.
 
 ``` bash
 $ yarn control  # Start control server
@@ -71,7 +70,8 @@ $ yarn rest     # Start rest server
 $ yarn start    # Start both servers
 ```
 
-### Development
+
+## Development
 
 For development you should clone from github and install:
 
@@ -90,6 +90,7 @@ $ yarn dev
 ```
 
 You may also run each of them individually in their modules.
+
 
 ## License
 

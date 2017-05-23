@@ -1,7 +1,3 @@
 {
-  "root": "./doc",
-  "title": "Alinex Operator System",
-  "description": "The operator application is a front-end to manage complex IT structures.",
-  "author": "Alexander Schilling",
-  "language": "en"
+  "root": "./doc"
 }
