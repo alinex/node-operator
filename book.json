@@ -1,7 +1,22 @@
 {
   "root": "./doc",
-  "title": "Alinex Operator System",
-  "description": "The operator application is a front-end to manage complex IT structures.",
-  "author": "Alexander Schilling",
-  "language": "en"
+
+  "pdf": {
+    "pageNumbers": true,
+    "headerTemplate": " ",
+    "footerTemplate": " "
+  },
+
+  "plugins": [
+    "todo", "mermaid-gb3", "puml",
+    "-highlight", "code-highlighter",
+    "toggle-chapters", "navigator", "downloadpdf"
+  ],
+  "pluginsConfig": {
+    "downloadpdf": {
+      "base": "https://www.gitbook.com/download/pdf/book/alinex/operator",
+      "label": "Download PDF",
+      "multilingual": false
+    }
+  }
 }
