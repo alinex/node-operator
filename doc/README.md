@@ -24,7 +24,7 @@ Find the source at:
 
 ## Coding
 
-General information for all the ALinex modules can be found at: https://alinex.gitbooks.io/nodejs/
+General information for all the Alinex modules can be found at: https://alinex.gitbooks.io/nodejs/
 
 
 

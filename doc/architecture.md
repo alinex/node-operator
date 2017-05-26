@@ -16,16 +16,25 @@ clustered for high scalability.
 The components displayed may be configured to your needs.
 
 __Control Server + Application Builder__
+
 - Server which runs the application
 - Code base for mobile Apps
 - Code base for Desktop Applications
 
+Read more in the [Control App book](https://alinex.gitbooks.io/control)
+
 __REST Server__
+
 - Authentication and Authorization Server
 - Data Retrieval Point
 - Processing Machine
 
+Read more in the [REST Server book](https://alinex.gitbooks.io/rest)
+
 __Data Store__
+
 - Persistent store for the REST Server
 - User Profiles with Settings
 - Roles and rights
+
+This is also documented in the [REST Server book](https://alinex.gitbooks.io/rest)

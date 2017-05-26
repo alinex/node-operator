@@ -28,8 +28,8 @@
     "control": "babel src -d dist",
     "start": "cross-env NODE_ENV=production node dist/index.js",
     "unit": "mocha --require babel-register test/mocha",
-    "test": "npm run lint && npm run unit",
     "lint": "eslint src --ext .js"
+    "test": "npm run lint && npm run unit",
   },
   "dependencies": {
     "alinex-rest": "https://github.com/alinex/node-rest"
@@ -55,7 +55,8 @@
     "nyc": "^10.3.2",
     "request": "^2.81.0",
     "should": "^11.2.1",
-    "should-http": "^0.1.1"
+    "should-http": "^0.1.1",
+    "yarn": "^0.24.5"
   },
   "engines": {
     "node": ">=4"

@@ -8,7 +8,12 @@
   },
 
   "plugins": [
+<<<<<<< HEAD
     "todo", "mermaid-gb3", "puml",
+=======
+    "todo", "mermaid-2", "plantuml",
+    "-highlight", "code-highlighter",
+>>>>>>> 04e8e41f696108b8b4bc66155ddcff3b67193813
     "toggle-chapters", "navigator", "downloadpdf"
   ],
   "pluginsConfig": {
@@ -16,6 +21,12 @@
       "base": "https://www.gitbook.com/download/pdf/book/alinex/operator",
       "label": "Download PDF",
       "multilingual": false
+<<<<<<< HEAD
+=======
+    },
+    "mermaid-2": {
+       "theme": "forest"
+>>>>>>> 04e8e41f696108b8b4bc66155ddcff3b67193813
     }
   }
 }
