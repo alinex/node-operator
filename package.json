@@ -28,14 +28,16 @@
     "control": "babel src -d dist",
     "start": "cross-env NODE_ENV=production node dist/index.js",
     "unit": "mocha --require babel-register test/mocha",
-    "lint": "eslint src --ext .js"
     "test": "npm run lint && npm run unit",
+    "lint": "eslint src --ext .js"
   },
   "dependencies": {
     "alinex-rest": "https://github.com/alinex/node-rest"
   },
   "devDependencies": {
-    "@mocha/eslint-config-mocha": "^0.0.0",
+    "eslint-config-mocha": "^0.0.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-node": "^4.2.2",
     "babel-cli": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2016": "^6.24.1",
